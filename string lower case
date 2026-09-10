@@ -1,0 +1,10 @@
+class Solution(object):
+    def toLowerCase(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        result = ""
+        for character in s:
+            if character.isupper():
+                character = character.lower()
