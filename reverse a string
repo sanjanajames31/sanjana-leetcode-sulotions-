@@ -1,0 +1,14 @@
+class Solution(object):
+    def reverseString(self, s):
+        """
+        :type s: List[str]
+        :rtype: None Do not return anything, modify s in-place instead.
+        """
+        left = 0  #left se character read karega
+        right = len(s) - 1 #right se char read karega 
+
+        while left < right:
+            s[left], s[right] = s[right], s[left] #swap the letters 
+
+            left += 1 #keep incrementing left char 
+            right -= 1 #decrement right character 
