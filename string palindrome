@@ -1,0 +1,19 @@
+#A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward 
+and backward. Alphanumeric characters include letters and numbers.#
+
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        new_string = ""
+
+        for ch in s:
+            if ch.isalnum():
+                new_string += ch.lower()
+
+        if new_string == new_string[::-1]:
+            return True
+        else:
+            return False
