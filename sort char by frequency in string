@@ -1,0 +1,27 @@
+class Solution(object):
+    def frequencySort(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+
+        freq = {}                (We need a dictionary to count how many times each character occurs.)
+
+        # Count each character
+        for ch in s:
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1
+
+        # Sort characters according to frequency                            (Our dictionary is: {'t': 1, 'r': 1, 'e': 2})
+        sorted_chars = sorted(freq, key=freq.get, reverse=True)             (when we write freq.get('e') we get 2..reverse=true means Sort from biggest to smallest)
+
+        # Create the answer
+        answer = ""
+
+        for ch in sorted_chars:
+            answer += ch * freq[ch]
+
+        return answer
+        
