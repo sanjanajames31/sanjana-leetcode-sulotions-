@@ -1,0 +1,14 @@
+Find the first character that appears only once.
+
+class Solution(object):
+    def firstUniqChar(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+       
+        for ch in s:
+            if s.count(ch) == 1:
+                return s.index(ch)
+
+        return -1
