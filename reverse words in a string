@@ -4,11 +4,11 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        # Remove extra spaces
+        # Remove extra spaces in the beginning and the end 
         s = s.strip() 
-        # Split into words 
+        # Split into words and put those words in a list 
         words = s.split() 
-        # Reverse the order of words 
+        # Reverse the order of words means(the sky is blue = blue is sky the)
         words.reverse() 
         # Join the words
         return " ".join(words)
