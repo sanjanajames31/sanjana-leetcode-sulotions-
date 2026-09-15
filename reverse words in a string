@@ -1,0 +1,15 @@
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        # Remove extra spaces
+        s = s.strip() 
+        # Split into words 
+        words = s.split() 
+        # Reverse the order of words 
+        words.reverse() 
+        # Join the words
+        return " ".join(words)
+        
