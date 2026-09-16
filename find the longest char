@@ -1,0 +1,13 @@
+s = "I love programming"
+
+words = s.split()   #converts the sentence into a list:
+
+longest = ""    #We start with an empty string.
+
+for word in words:    #checks each word one by one.
+    if len(word) > len(longest):        #len("I") > len("")=1 > 0 → True...."love"=4 > 1 → True...."programming"=11 > 4 → True
+        longest = word
+
+print(longest)
+
+o/p----programming 
