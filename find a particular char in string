@@ -1,0 +1,13 @@
+s = "python"
+ch = "t"
+
+found = False
+
+for i in range(len(s)):
+    if s[i] == ch:
+        print("Character found at index", i)
+        found = True
+        break
+
+if found == False:
+    print("Character not found")
