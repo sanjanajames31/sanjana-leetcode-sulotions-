@@ -1,0 +1,9 @@
+s = "hello world python"
+
+new_string = ""
+
+for ch in s:
+    if ch != " ":
+        new_string += ch
+
+print(new_string)
