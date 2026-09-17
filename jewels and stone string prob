@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution(object):                                                   #hashing problem
     def numJewelsInStones(self, jewels, stones):
         """
         :type jewels: str
