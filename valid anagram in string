@@ -1,0 +1,33 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s) != len(t):
+            return False
+
+        freq = {}
+
+        # Count characters in s
+        for ch in s:
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1
+        
+        # Remove characters using t      #Why subtract?
+        for ch in t:                     #Because we're basically asking:
+            if ch in freq:   #"Did t use exactly the same number of each character that s had?"
+                freq[ch] -= 1
+            else:
+                return False
+
+        # Check if all frequencies became 0
+        for ch in freq:
+            if freq[ch] != 0:
+                return False
+
+        return True
+        
