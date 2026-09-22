@@ -4,7 +4,7 @@ vowels = 0
 consonants = 0
 
 for ch in s:
-
+                  
     if ch.lower() in "aeiou":
         vowels += 1
 
