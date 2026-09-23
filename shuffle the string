@@ -1,0 +1,14 @@
+class Solution(object):
+    def restoreString(self, s, indices):          #s=("code")
+        """                                        #indices=[3,1,2,0]
+        :type s: str
+        :type indices: List[int]
+        :rtype: str
+        """
+        result = [""] * len(s)             #new empty string called result and multiply the length of s in it
+
+        for i in range(len(s)):       #make a loop to visit all the char of string s 
+            result[indices[i]] = s[i]      #now acc to the index given in indices assign the char of string s 
+
+        return "".join(result)     #then join it and insert in string called result 
+        
