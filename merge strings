@@ -1,0 +1,21 @@
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: str
+        """
+        result = ""     #We create an empty string where we will store our final answer.
+        i = 0     #i is our index/position,,,i = 0 means we start from the first character.
+
+        while i < len(word1) or i < len(word2):       #Keep going as long as at least one string still has characters left.
+
+            if i < len(word1):      #"Does word1 still have a character at position i?"
+                result += word1[i]    If yes, add it to result.
+
+            if i < len(word2):           #Same thing, but for word2.
+                result += word2[i]
+
+            i += 1   #We move to the next position.
+
+        return result   
