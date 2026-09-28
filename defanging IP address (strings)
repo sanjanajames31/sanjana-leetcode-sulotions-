@@ -1,0 +1,26 @@
+class Solution(object):
+    def defangIPaddr(self, address):
+        """
+        :type address: str
+        :rtype: str
+        """
+        # Create an empty string
+        result = ""
+
+        # Go through every character of the address
+        for char in address:
+
+            # If the character is a dot
+            if char == ".":
+
+                # Add [.] instead of .
+                result = result + "[.]"
+
+            else:
+
+                # Otherwise, add the original character
+                result = result + char
+
+        # Return the final answer
+        return result
+        
