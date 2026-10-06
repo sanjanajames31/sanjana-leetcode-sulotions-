@@ -1,0 +1,20 @@
+#Which customer has the most money, and how much money do they have in total?
+class Solution(object):
+    def maximumWealth(self, accounts):         #accounts contains all the customers' money.
+        """
+        :type accounts: List[List[int]]
+        :rtype: int
+        """
+        max_wealth = 0         #We create a variable to store the largest wealth found so far.
+
+        for customer in accounts:     #This goes through one customer at a time.
+            total = 0           #Start calculating one customer's money
+
+            for money in customer:       #Now we go through each amount that the customer has.
+                total = total + money     #Add the money
+
+            if total > max_wealth:   #We compare the customer's total with the richest amount we've seen so farne
+                max_wealth = total
+
+        return max_wealth
+        
