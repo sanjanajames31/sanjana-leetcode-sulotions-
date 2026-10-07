@@ -1,0 +1,15 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        """
+        :type nums: List[int]
+        :type n: int
+        :rtype: List[int]
+        """
+        ans = []     #Create an empty array
+
+        for i in range(n):   #Run a loop...lets take n=3 will give index 0, 1, 2
+            ans.append(nums[i])  #Take an element from the first half
+            ans.append(nums[i + n]) #Take the corresponding element from the second half
+#initially i=0...i+n=0+3=3...and so on for i=1,2
+        return ans
+        
