@@ -1,0 +1,19 @@
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        result = []  #Creates an empty array where we'll store the answers.
+
+        for i in range(len(nums)): #Take each number one by one.
+            count = 0 #Start counting how many numbers are smaller.
+
+            for j in range(len(nums)): #Compare current number with every number in the array
+                if nums[j] < nums[i]: #If the other number is smaller, increase count.
+                    count += 1
+
+            result.append(count) #Put that count into our answer array.
+
+        return result #Return the final array.
+        
