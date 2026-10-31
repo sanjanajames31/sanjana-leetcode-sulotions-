@@ -1,0 +1,46 @@
+class Solution(object):
+    def addBinary(self, a, b):
+        """
+        :type a: str
+        :type b: str
+        :rtype: str
+        """
+        # Step 1: Initialize variables
+        result = ""
+        carry = 0
+
+        # Step 2: Start from the last index of both strings
+        i = len(a) - 1
+        j = len(b) - 1
+
+        # Step 3: Run the loop until both strings
+        # are completely processed and carry is zero
+        while i >= 0 or j >= 0 or carry > 0:
+
+            # Step 4: Initialize sum
+            total = carry
+
+            # Step 5: Add the current bit of string a
+            if i >= 0:
+                total = total + int(a[i])
+
+            # Step 6: Add the current bit of string b
+            if j >= 0:
+                total = total + int(b[j])
+
+            # Step 7: Calculate the current binary digit
+            bit = total % 2
+
+            # Step 8: Calculate carry
+            carry = total // 2
+
+            # Step 9: Add the bit to the result
+            result = str(bit) + result
+
+            # Step 10: Move to the previous bit
+            i = i - 1
+            j = j - 1
+
+        # Step 11: Return the final binary string
+        return result
+        
